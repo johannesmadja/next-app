@@ -1,14 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Roboto, Montserrat } from "next/font/google";
+import "./globals.scss";
+import Header from "../components/layout/header/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["100", "300"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["100", "300"],
 });
 
 export const metadata = {
@@ -18,8 +21,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${roboto.variable} ${montserrat.variable}`}>
+      <body>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
