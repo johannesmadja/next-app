@@ -24,3 +24,15 @@ body {
     font-size: 16px;
   }
 }
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
