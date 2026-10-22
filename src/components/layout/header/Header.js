@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import { User } from "lucide-react";
-import MovieSearch from "@/components/ui/MovieSearch";
+import MovieSearch from "@/components/ui/movieSearch/MovieSearch";
 
 function Header() {
   return (
