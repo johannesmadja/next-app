@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  width: 100%;
+
+  > div {
+    width: 200px;
+  }
+}

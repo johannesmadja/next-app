@@ -2,20 +2,21 @@ import Link from "next/link";
 import styles from "./MediaCard.module.scss";
 import Image from "next/image";
 
-function MediaCard({ mediaId }) {
+function MediaCard({ movie }) {
   return (
     <div className={`${styles.card}`}>
-      <Link href={`/movies/${mediaId}`}>
+      <Link href={`/movies/${movie.id}`}>
         <div className={`${styles.image}`}>
           <Image
-            src="https://image.tmdb.org/t/p/w500/hYQs5RPHiWctoYqvI8baHiIqdd8.jpg"
-            alt="media title"
+            src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}${movie.poster_path}`}
+            alt={`${movie.title}`}
             fill
           />
         </div>
         <div className={`${styles.content}`}>
-          <h1> Creed III</h1>
-          <p>Le 01/03/2023</p>
+          <p className={styles.vote}>{movie.vote_average}</p>
+          <h3> {movie.title}</h3>
+          <p>Le {new Date(movie.release_date).toLocaleDateString("fr-FR")}</p>
         </div>
       </Link>
     </div>

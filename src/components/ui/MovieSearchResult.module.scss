@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+.container {
+  position: absolute;
+  z-index: 2;
+  background-color: $whiteColor;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-montserrat);
+  max-height: 70vh;
+  overflow-y: auto;
+
+  > a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      p {
+        color: $secondaryColor;
+      }
+    }
+
+    img {
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      margin-left: 10px;
+      color: black;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}
