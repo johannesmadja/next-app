@@ -1,5 +1,5 @@
 import { getMovieByToken } from "@/utils/movieClient";
-import MediaCard from "../layout/card/MediaCard";
+import MediaCard from "@/components/media/mediaCard/MediaCard";
 import styles from "./Popular.module.scss";
 
 async function Popular() {

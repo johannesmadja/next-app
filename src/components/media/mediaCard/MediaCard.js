@@ -11,6 +11,7 @@ function MediaCard({ movie }) {
             src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}${movie.poster_path}`}
             alt={`${movie.title}`}
             fill
+            sizes="200px"
           />
         </div>
         <div className={`${styles.content}`}>
