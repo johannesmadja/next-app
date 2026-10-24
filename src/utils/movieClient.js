@@ -12,7 +12,7 @@ export const getMovieByToken = (path, params = [], language = "fr-FR") => {
   const url = new URL(`${process.env.TMDB_API_URL}${path}`);
 
   url.searchParams.set("language", language);
-  params.forEach((param) => {
+  params.filter(param => param.value).forEach((param) => {
     url.searchParams.set(param.key, param.value);
   })
 
