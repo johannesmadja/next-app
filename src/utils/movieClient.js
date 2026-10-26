@@ -1,3 +1,4 @@
+import { cacheLife } from "next/cache";
 import "server-only";
 
 export const getMovieByPath = (path, language = "fr-FR") => {
@@ -8,13 +9,18 @@ export const getMovieByPath = (path, language = "fr-FR") => {
   return fetch(url).then((res) => res.json());
 };
 
-export const getMovieByToken = (path, params = [], language = "fr-FR") => {
+export const getMovieByToken = async (path, params = [], language = "fr-FR") => {
+  "use cache";
+  cacheLife("hours");
+
   const url = new URL(`${process.env.TMDB_API_URL}${path}`);
 
   url.searchParams.set("language", language);
-  params.filter(param => param.value).forEach((param) => {
-    url.searchParams.set(param.key, param.value);
-  })
+  params
+    .filter((param) => param.value)
+    .forEach((param) => {
+      url.searchParams.set(param.key, param.value);
+    });
 
   return fetch(url, {
     headers: {
