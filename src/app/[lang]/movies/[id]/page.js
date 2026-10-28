@@ -4,6 +4,7 @@ import SimilarMovies from "@/components/media/similarMovie/SimilarMovie";
 import { getMovieByToken } from "@/utils/movieClient";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { lang as getLang } from "next/root-params";
 
 export default async function MoviePage({ params }) {
   return (
@@ -15,8 +16,9 @@ export default async function MoviePage({ params }) {
 
 async function MoviePageContent({ params }) {
   const { id } = await params;
+  const lang = await getLang();
 
-  const movie = await getMovieByToken(`/movie/${id}`);
+  const movie = await getMovieByToken(`/movie/${id}`, [], lang);
   if (!movie.original_title) {
     return notFound();
   }

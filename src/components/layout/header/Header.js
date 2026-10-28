@@ -2,8 +2,12 @@ import Link from "next/link";
 import styles from "./Header.module.scss";
 import { User } from "lucide-react";
 import MovieSearch from "@/components/media/movieSearch/MovieSearch";
+import LanguageSelector from "../languageSelector/languageSelector";
+import { lang as getLang } from "next/root-params";
 
-function Header() {
+async function Header() {
+  const lang = await getLang();
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -26,6 +30,7 @@ function Header() {
         <div className={styles.user}>
           <User size={22} />
         </div>
+        <LanguageSelector currentLanguage={lang} />
       </div>
     </header>
   );

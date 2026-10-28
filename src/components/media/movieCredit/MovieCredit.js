@@ -1,9 +1,11 @@
 import { getMovieByToken } from "@/utils/movieClient";
 import styles from "./MovieCredit.module.scss";
 import Image from "next/image";
+import { lang as getLang, lang } from "next/root-params";
 
 const MovieCredits = async ({ movieId }) => {
-  const { cast } = await getMovieByToken(`/movie/${movieId}/credits`);
+  const lang = await getLang();
+  const { cast } = await getMovieByToken(`/movie/${movieId}/credits`, [], lang);
   return (
     <div className={styles.credits}>
       {cast.slice(0, 4).map((person) => (

@@ -1,9 +1,11 @@
 import { getMovieByToken } from "@/utils/movieClient";
 import styles from "./Genre.module.scss";
 import Link from "next/link";
+import { lang as getLang } from "next/root-params";
 
 export default async function Genres() {
-  const { genres } = await getMovieByToken("/genre/movie/list");
+  const lang = await getLang();
+  const { genres } = await getMovieByToken("/genre/movie/list", [], lang);
 
   return (
     <div>
