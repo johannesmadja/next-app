@@ -3,14 +3,16 @@ import styles from "./languageSelector.module.scss";
 
 import { availableLocales } from "@/lib/locales";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const LanguageLink = ({ locale, onClick }) => {
   const pathname = usePathname();
-  // Remplace le premier segment (/fr, /en) par la langue choisie
-  const href = pathname.replace(/^\/[^/]+/, `/${locale}`);
+  const searchParams = useSearchParams().toString();
+  // Remplace le premier segment (/fr, /en) par la langue choisie et conserve la query
+  const path = pathname.replace(/^\/[^/]+/, `/${locale}`);
+  const href = searchParams ? `${path}?${searchParams}` : path;
 
   return (
     <Link href={href} onClick={onClick}>
