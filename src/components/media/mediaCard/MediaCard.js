@@ -1,10 +1,12 @@
 import Link from "next/link";
 import styles from "./MediaCard.module.scss";
 import Image from "next/image";
+import LikeButton from "@/components/media/likes/LikeButton";
 
 function MediaCard({ movie }) {
   return (
     <div className={`${styles.card}`}>
+      <LikeButton movieId={movie.id} />
       <Link href={`/movies/${movie.id}`}>
         <div className={`${styles.image}`}>
           <Image

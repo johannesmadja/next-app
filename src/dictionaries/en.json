@@ -4,5 +4,9 @@
   },
   "genres": {
     "title": "Browse by genres"
+  },
+  "profile": {
+    "likedMovies": "Liked movies",
+    "noLikedMovies": "You haven’t liked any movie yet."
   }
 }

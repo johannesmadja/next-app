@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.likeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: $secondaryColor;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  svg {
+    fill: transparent;
+    transition: fill 0.15s ease;
+  }
+
+  &.liked svg {
+    fill: currentColor;
+  }
+}
