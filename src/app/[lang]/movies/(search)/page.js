@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import SearchResult from "./searchResult";
-import Loading from "@/components/layout/loading/loading";
+import SearchResult from "@/components/media/searchResult/SearchResult";
+import Loading from "@/components/ui/loading/Loading";
 
 function MoviesPage({searchParams}) {
     return (

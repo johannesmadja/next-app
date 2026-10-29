@@ -1,4 +1,4 @@
-import { getMovieByToken } from "@/utils/movieClient";
+import { getMovieByToken } from "@/lib/movieClient";
 import styles from "./MovieCredit.module.scss";
 import Image from "next/image";
 import { lang as getLang, lang } from "next/root-params";

@@ -1,6 +1,6 @@
-import Loading from "@/components/layout/loading/loading";
+import Loading from "@/components/ui/loading/Loading";
 import { Suspense } from "react";
-import SearchResult from "../../searchResult";
+import SearchResult from "@/components/media/searchResult/SearchResult";
 
 export default function GenreDetails({ params, searchParams }) {
   return (

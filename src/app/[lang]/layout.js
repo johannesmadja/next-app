@@ -1,6 +1,7 @@
 import { Roboto, Montserrat } from "next/font/google";
 import "./globals.scss";
-import Header from "../../components/layout/header/Header";
+import Header from "@/components/layout/header/Header";
+import AuthProvider from "@/components/auth/authProvider/AuthProvider";
 import { availableLocales } from "@/lib/locales";
 
 const roboto = Roboto({
@@ -30,8 +31,10 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang} className={`${roboto.variable} ${montserrat.variable}`}>
       <body>
-        <Header />
-        <main>{children}</main>
+        <AuthProvider>
+          <Header />
+          <main>{children}</main>
+        </AuthProvider>
       </body>
     </html>
   );

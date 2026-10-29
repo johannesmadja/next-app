@@ -77,3 +77,8 @@ Tu peux vérifier le résultat avec `npm run studio`.
 
 Ce que j'ai fait tout à l'heure avec `migrate diff` et `migrate deploy` ne te concerne pas : c'était seulement parce que mon terminal ne peut pas répondre aux questions de Prisma.
 ```
+
+**Pour générer une secretKey 
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+```

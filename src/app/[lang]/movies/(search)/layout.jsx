@@ -1,6 +1,6 @@
-import SearchSideBar from "@/components/layout/searchSideBar/searchSideBar";
+import SearchSideBar from "@/components/layout/searchSideBar/SearchSideBar";
 import styles from "./layout.module.scss";
-import { getMovieByToken } from "@/utils/movieClient";
+import { getMovieByToken } from "@/lib/movieClient";
 
 export default async function MovieSearchLayout({ children }) {
   const { genres } = await getMovieByToken("/genre/movie/list");

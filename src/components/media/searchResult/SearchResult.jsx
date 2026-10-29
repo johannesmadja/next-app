@@ -1,6 +1,6 @@
 import MediaCard from "@/components/media/mediaCard/MediaCard";
-import { getMovieByToken } from "@/utils/movieClient";
-import styles from "./searchResult.module.scss";
+import { getMovieByToken } from "@/lib/movieClient";
+import styles from "./SearchResult.module.scss";
 
 export default async function SearchResult({ searchParams, genreId }) {
   const { results } = await getMovieByToken("/discover/movie", [

@@ -1,7 +1,7 @@
 "use client"
 
 import { notFound, useParams, useSelectedLayoutSegment } from "next/navigation";
-import styles from "./searchSideBar.module.scss"
+import styles from "./SearchSideBar.module.scss"
 import Form from "./Form/Form";
 
 export default function SearchSideBar({genres}) {

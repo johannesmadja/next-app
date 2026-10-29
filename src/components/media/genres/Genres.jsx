@@ -1,8 +1,8 @@
-import { getMovieByToken } from "@/utils/movieClient";
-import styles from "./Genre.module.scss";
+import { getMovieByToken } from "@/lib/movieClient";
+import styles from "./Genres.module.scss";
 import Link from "next/link";
 import { lang as getLang } from "next/root-params";
-import { getDictionary } from "@/utils/dictionnaries";
+import { getDictionary } from "@/lib/dictionaries";
 
 export default async function Genres() {
   const lang = await getLang();

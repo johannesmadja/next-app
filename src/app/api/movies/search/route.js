@@ -1,4 +1,4 @@
-import { getMovieByToken } from "@/utils/movieClient";
+import { getMovieByToken } from "@/lib/movieClient";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);

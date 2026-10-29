@@ -1,8 +1,8 @@
 import { lang as getLang } from "next/root-params";
-import { getMovieByToken } from "@/utils/movieClient";
+import { getMovieByToken } from "@/lib/movieClient";
 import MediaCard from "@/components/media/mediaCard/MediaCard";
 import styles from "./Popular.module.scss";
-import { getDictionary } from "@/utils/dictionnaries";
+import { getDictionary } from "@/lib/dictionaries";
 
 async function Popular() {
   const lang = await getLang();

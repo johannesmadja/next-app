@@ -1,4 +1,4 @@
-import { getMovieByToken } from "@/utils/movieClient";
+import { getMovieByToken } from "@/lib/movieClient";
 import MediaCard from "../mediaCard/MediaCard";
 import styles from "./SimilarMovie.module.scss";
 

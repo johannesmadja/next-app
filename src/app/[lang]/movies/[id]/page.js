@@ -1,7 +1,7 @@
-import Loading from "@/components/layout/loading/loading";
-import MovieDetail from "@/components/media/mediaDetail/MovieDetail";
+import Loading from "@/components/ui/loading/Loading";
+import MovieDetail from "@/components/media/movieDetail/MovieDetail";
 import SimilarMovies from "@/components/media/similarMovie/SimilarMovie";
-import { getMovieByToken } from "@/utils/movieClient";
+import { getMovieByToken } from "@/lib/movieClient";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { lang as getLang } from "next/root-params";

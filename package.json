@@ -24,6 +24,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/node": "26.6.5",
     "@types/react": "19.3.0",
     "babel-plugin-react-compiler": "1.0.0",

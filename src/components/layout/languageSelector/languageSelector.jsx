@@ -1,5 +1,5 @@
 "use client";
-import styles from "./languageSelector.module.scss";
+import styles from "./LanguageSelector.module.scss";
 
 import { availableLocales } from "@/lib/locales";
 import Link from "next/link";

@@ -1,7 +1,6 @@
-import MediaCard from "@/components/media/mediaCard/MediaCard";
 import styles from "./page.module.scss";
 import Popular from "@/components/media/popular/Popular";
-import Genres from "@/components/media/genre/Genres";
+import Genres from "@/components/media/genres/Genres";
 import { cacheLife } from "next/cache";
 
 export default async function Home() {
